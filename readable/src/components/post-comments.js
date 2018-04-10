@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import * as acts from '../actions'
+import * as acts from '../actions/PostActions'
 import { connect } from 'react-redux'
 import CommentEntry from './comment-entry.js'
 import CommentForm from './comment-form.js'

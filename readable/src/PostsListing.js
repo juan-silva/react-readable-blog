@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import * as acts from './actions'
+import * as actsPost from './actions/PostActions'
+import * as actsCat from './actions/CategoryActions'
 import { connect } from 'react-redux'
 import Toolbar from './components/toolbar.js'
 import PostForm from './components/post-form.js'
@@ -16,10 +17,10 @@ class PostsListing extends Component {
 	componentDidMount(){
 		
 		if(this.props.categories.length == 0)
-		  this.props.dispatch(acts.fetchCategories())
+		  this.props.dispatch(actsCat.fetchCategories())
 
 		if(this.props.posts == 0)
-		  this.props.dispatch(acts.fetchPosts())
+		  this.props.dispatch(actsPost.fetchPosts())
 
 		if(this.props.categoryID !== undefined)
 			this.setState({currentCat: this.props.categoryID})

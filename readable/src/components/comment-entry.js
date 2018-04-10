@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import Moment from 'react-moment'
 import CommentForm from './comment-form'
-import * as acts from '../actions'
+import * as acts from '../actions/CommentActions'
 import { connect } from 'react-redux'
 
 class CommentEntry extends Component{
@@ -77,9 +77,7 @@ class CommentEntry extends Component{
 }
 
 function mapStateToProps(store){
-	return {
-		//Just need the dispatch props
-	}
+	return null
 }
 
 export default connect(mapStateToProps)(CommentEntry)
